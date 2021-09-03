@@ -15,3 +15,8 @@ mix.js('resources/js/app.js', 'public/js').react()
     .postCss('resources/css/app.css', 'public/css', [
         require('tailwindcss'),
     ]);
+
+mix.browserSync({
+    proxy: 'http://localhost:80',
+    open: false,
+})
